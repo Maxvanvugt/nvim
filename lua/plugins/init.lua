@@ -28,7 +28,7 @@ return {
     "sindrets/diffview.nvim",
     lazy = false,
   },
-  -- Diffview
+  -- Gitsign
   {
     "lewis6991/gitsigns.nvim",
     lazy = false,
@@ -36,19 +36,19 @@ return {
       require("gitsigns").setup()
     end
   },
-  -- Diffview
+  -- Blankline
   {
     "lukas-reineke/indent-blankline.nvim",
     main = "ibl",
     lazy = false,
     opts = {},
   },
-  -- Diffview
+  -- Neoformat
   {
     "sbdchd/neoformat",
     lazy = false
   },
-  -- Diffview
+  -- Neogit
   {
     "NeogitOrg/neogit",
     dependencies = {
@@ -59,26 +59,26 @@ return {
     },
     config = true
   },
-  -- Diffview
+  -- Autopairs
   {
     "windwp/nvim-autopairs",
     event = "InsertEnter",
     opts = {}, -- this is equalent to setup({}) function
   },
-  -- Diffview
+  -- Nio
   {
     "nvim-neotest/nvim-nio"
   },
-  -- Diffview
+  -- TS Autotag
   {
     "windwp/nvim-ts-autotag",
     lazy = false,
   },
-  -- Diffview
+  -- Web Devicons
   {
     'nvim-tree/nvim-web-devicons'
   },
-  -- Diffview
+  -- Oil
   {
     'stevearc/oil.nvim',
     lazy = true,
@@ -86,7 +86,7 @@ return {
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
-  -- Diffview
+  -- Tailwindcss Colorizer
   {
     "roobert/tailwindcss-colorizer-cmp.nvim",
     -- optionally, override the default options:
@@ -96,22 +96,22 @@ return {
       })
     end,
   },
-  -- Diffview
+  -- Tmux Navigator
   {
     "christoomey/vim-tmux-navigator",
     lazy = false,
   },
-  -- Diffview
+  -- True Zen
   {
     "pocco81/true-zen.nvim",
     lazy = false,
   },
-  -- Diffview
+  -- Fugitive
   {
     lazy = false,
     "tpope/vim-fugitive",
   },
-  -- Diffview
+  -- Illuminate
   {
     "RRethy/vim-illuminate",
     lazy = false,
@@ -119,7 +119,7 @@ return {
       require("illuminate").configure({})
     end,
   },
-  -- Diffview
+  -- Which Key
   {
     "folke/which-key.nvim",
     lazy = false,
