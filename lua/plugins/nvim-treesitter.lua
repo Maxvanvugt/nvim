@@ -30,6 +30,7 @@ local config = function()
 			"vue",
 			"svelte",
 			"toml",
+      "java",
 		},
 		auto_install = true,
 		highlight = {

@@ -4,6 +4,7 @@ local typescript_organise_imports = require("util.lsp").typescript_organise_impo
 
 local config = function()
 	require("neoconf").setup({})
+    require('java').setup()
 	local cmp_nvim_lsp = require("cmp_nvim_lsp")
 	local lspconfig = require("lspconfig")
 	local capabilities = cmp_nvim_lsp.default_capabilities()
@@ -39,6 +40,12 @@ local config = function()
 		capabilities = capabilities,
 		on_attach = on_attach,
 		filetypes = { "json", "jsonc" },
+	})
+
+	-- Java
+	lspconfig.jdtls.setup({
+		capabilities = capabilities,
+		on_attach = on_attach,
 	})
 
 	-- python
@@ -184,7 +191,7 @@ local config = function()
 			languages = {
 				lua = { luacheck, stylua },
 				python = { flake8, black },
-				typescript = { eslint_d, prettier_d },
+				typescript = { eslint_d },
 				json = { eslint, fixjson },
 				jsonc = { eslint, fixjson },
 				sh = { shellcheck, shfmt },

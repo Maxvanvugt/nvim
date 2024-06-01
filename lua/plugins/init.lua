@@ -124,5 +124,18 @@ return {
     "folke/which-key.nvim",
     lazy = false,
     opts = {},
+  },
+  -- JDT LS
+  {
+    "mfussenegger/nvim-jdtls",
+  },
+  {
+    "f-person/git-blame.nvim",
+  },
+  {
+    "axkirillov/telescope-changed-files",
+  },
+  {
+    "mg979/vim-visual-multi",
   }
 }

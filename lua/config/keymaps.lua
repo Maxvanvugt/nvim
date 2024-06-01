@@ -1,13 +1,13 @@
 local mapkey = require("util.keymapper").mapvimkey
-
 -- Buffer Navigation
 mapkey("<leader>bn", "bnext", "n") -- Next buffer
+mapkey("<TAB>", "bnext", "n") -- Next buffer
 mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
 mapkey("<leader>bd", "bdelete", "n") -- Delete buffer
 mapkey("<leader>bc", "bufdo bd", "n") -- Delete all buffers
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
-
+ 
 -- Directory Navigatio}n
 mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
@@ -26,6 +26,7 @@ mapkey("<C-j>", "TmuxNavigateDown", "n") -- Navigate Down
 mapkey("<C-k>", "TmuxNavigateUp", "n") -- Navigate Up
 mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
 
+
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
 mapkey("<leader>sh", "split", "n") -- Split Horizontally
@@ -39,6 +40,15 @@ mapkey("<leader>wo", "wincmd o", "n") -- CLose all other windows
 mapkey("<leader>wx", "wincmd x", "n") -- Swap current with next
 mapkey("<leader>ww", "update", "n") -- Update current file
 mapkey("<leader>ws", "luafile %", "n") -- Source lua file
+
+-- Java
+mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
+
+-- Format
+mapkey ("<leader>nf", ":'<,'>Neoformat", "n") -- Format
+
+-- Git blame
+mapkey("<leader>gt", "GitBlameToggle", "n") -- Run Java Main
 
 -- Diffview
 mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview 
@@ -71,3 +81,9 @@ api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 -- Comments
 api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
+-- api.nvim_set_keymap("i", "<TAB>", vim.fn.pumvisible(), { noremap = false, expr = true })
+-- vim.keymap.set("i", "<TAB>", 'coc#pum#visible() ? coc#pum#next(1) : v:lua.check_back_space() ? "<TAB>" : coc#refresh()')
+-- vim.keymap.set('i', '<Tab>', vim.fn.pumvisible() ? "\<C-n>" : "<\Tab>", { expr = true })
+-- vim.keymap.set('i', '<Tab>', function()
+--   return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
+-- end, { expr = true })
