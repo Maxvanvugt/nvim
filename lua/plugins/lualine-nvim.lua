@@ -1,7 +1,7 @@
 local config = function()
 	require("lualine").setup({
 		options = {
-			theme = "auto",
+			theme = "dracula",
 			globalstatus = true,
 			component_separators = { left = "|", right = "|" },
 			section_separators = { left = "", right = "" },
@@ -9,9 +9,9 @@ local config = function()
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "buffers" },
-			lualine_x = { "encoding", "fileformat", "filetype" },
-			lualine_y = { "progress" },
-			lualine_z = { "location" },
+			lualine_x = { "encoding", "fileformat", "diff" },
+			lualine_y = { "branch" },
+			lualine_z = { "searchcount" },
 		},
 		tabline = {},
 	})
