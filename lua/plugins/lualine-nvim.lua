@@ -6,6 +6,7 @@ local config = function()
 			component_separators = { left = "|", right = "|" },
 			section_separators = { left = "", right = "" },
 		},
+
 		sections = {
 			lualine_a = { "mode" },
 			lualine_b = { "buffers" },

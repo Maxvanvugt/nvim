@@ -82,7 +82,9 @@ return {
   {
     'stevearc/oil.nvim',
     lazy = true,
-    opts = {},
+    opts = {
+            default_file_explorere = true
+        },
     -- Optional dependencies
     dependencies = { "nvim-tree/nvim-web-devicons" },
   },
