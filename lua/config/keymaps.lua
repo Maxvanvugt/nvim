@@ -41,6 +41,9 @@ mapkey("<leader>wx", "wincmd x", "n") -- Swap current with next
 mapkey("<leader>ww", "update", "n") -- Update current file
 mapkey("<leader>ws", "luafile %", "n") -- Source lua file
 
+-- Tab navigation
+mapkey("<S-TAB>", "tabnext", "n") -- Source lua file
+
 -- Java
 mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
 

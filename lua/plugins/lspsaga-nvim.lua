@@ -16,6 +16,10 @@ return {
             lightbulb = {
                 enable = false,
                 sign = false
+            },
+            symbol_in_winbar = {
+                enable = false,
+                sign = false
             }
 		})
 	end,

@@ -4,6 +4,16 @@ return {
   opts = {
     -- add any options here
   },
+  config = function()
+    require("noice").setup({
+      routes = {
+        {
+          filter = { event = "msg_show" },
+          opts = { skip = true },
+        },
+      },
+    })
+  end;
   dependencies = {
     -- if you lazy-load any plugin below, make sure to add proper `module="..."` entries
     "MunifTanjim/nui.nvim",
