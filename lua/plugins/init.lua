@@ -180,5 +180,14 @@ return {
     end,
     version = "4.6.1",
     dependencies = 'nvim-tree/nvim-web-devicons'
+  },
+  {
+    "nvim-telescope/telescope.nvim",
+    dependencies = {
+        {
+            "isak102/telescope-git-file-history.nvim",
+            dependencies = { "tpope/vim-fugitive" }
+        }
+    }
   }
 }

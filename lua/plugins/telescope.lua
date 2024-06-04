@@ -45,9 +45,12 @@ require("telescope").setup({
   },
   extensions = {
     "fzf",
-    "themes"
+    "themes",
+    "git_file_history"
   },
 })
+
+require("telescope").load_extension("git_file_history")
 
 return {
 	"nvim-telescope/telescope.nvim",
