@@ -20,17 +20,27 @@
 -- 	end,
 -- }
 
-return {
-	"EdenEast/nightfox.nvim",
-	name = "theme",
-	lazy = false,
-	priority = 999,
-	config = function()
-		vim.cmd("colorscheme carbonfox")
-		require("nightfox").setup({})
-	end,
-}
+-- return {
+-- 	"EdenEast/nightfox.nvim",
+-- 	name = "theme",
+-- 	lazy = false,
+-- 	priority = 999,
+-- 	config = function()
+-- 		vim.cmd("colorscheme nightfox")
+-- 		require("nightfox").setup({})
+-- 	end,
+-- }
 
+
+return {
+  "themercorp/themer.lua",
+  lazy = false,
+  config = function()
+    require("themer").setup({
+	  colorscheme = "nightlamp"
+    })
+  end
+}
 -- return {
 --   "nyoom-engineering/oxocarbon.nvim",
 --   name = "theme",

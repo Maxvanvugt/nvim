@@ -9,9 +9,7 @@ local config = function()
 
 		sections = {
 			lualine_a = { "mode" },
-			lualine_b = { "buffers" },
-			lualine_x = { "encoding", "fileformat", "diff" },
-			lualine_y = { "branch" },
+			lualine_x = { "encoding", "fileformat" },
 			lualine_z = { "searchcount" },
 		},
 		tabline = {},

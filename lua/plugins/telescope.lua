@@ -12,6 +12,7 @@ local keys = {
 	{ "<leader>fs", "<cmd>Telescope grep_string<cr>", desc = "Grep String" },
 	{ "<leader>ft", "<cmd>Telescope treesitter<cr>", desc = "Treesitter" },
 	{ "<leader>fc", "<cmd>Telescope git_status<cr>", desc = "Changed Files" },
+	{ "<leader>ft", "<cmd>Telescope themes<cr>", desc = "Themes" },
 }
 
 require("telescope").setup({
@@ -44,6 +45,7 @@ require("telescope").setup({
   },
   extensions = {
     "fzf",
+    "themes"
   },
 })
 

@@ -169,6 +169,16 @@ return {
   },
   {
     'akinsho/bufferline.nvim',
+    lazy = false,
+    config = function()
+        vim.opt.termguicolors = true
+        require("bufferline").setup{
+                options = {
+                    offsets = {{ filetype = 'NvimTree', text = '', padding = 1}}
+                }
+            }
+    end,
+    version = "4.6.1",
     dependencies = 'nvim-tree/nvim-web-devicons'
   }
 }
