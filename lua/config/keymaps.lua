@@ -53,9 +53,13 @@ mapkey ("<leader>nf", ":'<,'>Neoformat", "n") -- Format
 -- Git blame
 mapkey("<leader>gt", "GitBlameToggle", "n") -- Run Java Main
 
+-- Git sign
+mapkey("n", "Gitsigns next_hunk", "n") -- Next hunk
+
 -- Diffview
 mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview 
 mapkey("<leader>dc", "DiffviewClose", "n") -- Close diffview 
+
 
 -- Show Full File-Path
 mapkey("<leader>pa", "ShowPath", "n") -- Show Full File Path
