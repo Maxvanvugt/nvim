@@ -7,7 +7,7 @@ mapkey("<leader>bd", "bdelete", "n") -- Delete buffer
 mapkey("<leader>bc", "bufdo bd", "n") -- Delete all buffers
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
- 
+
 -- Directory Navigatio}n
 mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
@@ -30,6 +30,8 @@ mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
 mapkey("<leader>sh", "split", "n") -- Split Horizontally
+mapkey("<leader>k", "vsplit", "n") -- Split Vertically
+mapkey("<leader>j", "split", "n") -- Split Horizontally
 mapkey("<C-Up>", "resize +2", "n")
 mapkey("<C-Down>", "resize -2", "n")
 mapkey("<C-Left>", "vertical resize +2", "n")
@@ -43,9 +45,9 @@ mapkey("<leader>ws", "luafile %", "n") -- Source lua file
 
 -- Tab navigation
 mapkey("<S-TAB>", "tabnext", "n") -- Source lua file
-
+mapkey("<leader>;", "tabnew %", "n") -- Source lua file
 -- Java
-mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
+-- mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
 
 -- Format
 mapkey ("<leader>nf", ":'<,'>Neoformat", "n") -- Format
