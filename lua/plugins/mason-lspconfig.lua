@@ -10,7 +10,7 @@ local opts = {
 		"emmet_ls",
 		"jsonls",
 		"clangd",
-    "jdtls"
+        "jdtls"
 	},
 
 	automatic_installation = true,

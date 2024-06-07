@@ -30,7 +30,7 @@ local config = function()
 			"vue",
 			"svelte",
 			"toml",
-      "java",
+            "java",
 		},
 		auto_install = true,
 		highlight = {
@@ -43,7 +43,7 @@ local config = function()
 				init_selection = "<C-s>",
 				node_incremental = "<C-s>",
 				scope_incremental = false,
-				node_decremental = "<BS>",
+				node_decremental = "<C-d>",
 			},
 		},
 	})
