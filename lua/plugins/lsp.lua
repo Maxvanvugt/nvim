@@ -40,6 +40,7 @@ return {
 			ensure_installed = {
 				"efm",
 				"bashls",
+				"eslint",
 				"tsserver",
 				"solidity",
 				"tailwindcss",
@@ -209,7 +210,7 @@ return {
 			})
 
 			-- eslint
-			lspconfig.eslint_lsp.setup({
+			lspconfig.eslint.setup({
 				capabilities = capabilities,
 				on_attach = on_attach,
 				filetypes = { "typescript" },
