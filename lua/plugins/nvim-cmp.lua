@@ -8,7 +8,7 @@ return {
 		cmp.setup({
 			snippet = {
 				expand = function(args)
-                    vim.fn["vsnip#anonymous"](args.body)
+					vim.fn["vsnip#anonymous"](args.body)
 				end,
 			},
 			mapping = cmp.mapping.preset.insert({
@@ -40,14 +40,5 @@ return {
 	end,
 	dependencies = {
 		"onsails/lspkind.nvim",
-		-- {
-		--
-		-- 	"L3MON4D3/LuaSnip",
-		-- 	-- follow latest release.
-		-- 	version = "2.3", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
-		-- 	-- install jsregexp (optional!).
-		-- 	build = "make install_jsregexp",
-  --           dependencies = { "rafamadriz/friendly-snippets" },
-		-- },
 	},
 }

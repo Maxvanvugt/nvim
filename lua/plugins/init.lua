@@ -23,19 +23,6 @@ return {
 		},
 		lazy = false,
 	},
-	-- Diffview
-	{
-		"sindrets/diffview.nvim",
-		lazy = false,
-	},
-	-- Gitsign
-	{
-		"lewis6991/gitsigns.nvim",
-		lazy = false,
-		config = function()
-			require("gitsigns").setup()
-		end,
-	},
 	-- Blankline
 	{
 		"lukas-reineke/indent-blankline.nvim",
@@ -47,17 +34,6 @@ return {
 	{
 		"sbdchd/neoformat",
 		lazy = false,
-	},
-	-- Neogit
-	{
-		"NeogitOrg/neogit",
-		dependencies = {
-			"nvim-lua/plenary.nvim", -- required
-			"sindrets/diffview.nvim", -- optional - Diff integration
-
-			"nvim-telescope/telescope.nvim", -- optional
-		},
-		config = true,
 	},
 	-- Autopairs
 	{
@@ -108,11 +84,6 @@ return {
 		"pocco81/true-zen.nvim",
 		lazy = false,
 	},
-	-- Fugitive
-	{
-		lazy = false,
-		"tpope/vim-fugitive",
-	},
 	-- Illuminate
 	{
 		"RRethy/vim-illuminate",
@@ -132,10 +103,6 @@ return {
 		"mfussenegger/nvim-jdtls",
 	},
 	{
-		"f-person/git-blame.nvim",
-        lazy = false
-	},
-	{
 		"mg979/vim-visual-multi",
 	},
 	{
@@ -152,9 +119,6 @@ return {
 	},
 	{
 		"hrsh7th/cmp-vsnip",
-	},
-	{
-		"hrsh7th/vim-vsnip",
 	},
 	{
 		"hrsh7th/vim-vsnip-integ",
