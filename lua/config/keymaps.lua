@@ -53,7 +53,7 @@ mapkey("<leader>;", "tabnew %", "n") -- Source lua file
 mapkey ("<leader>nf", ":'<,'>Neoformat", "n") -- Format
 
 -- Git blame
-mapkey("<leader>gt", "GitBlameToggle", "n") -- Run Java Main
+mapkey("<leader>gt", "GitBlameToggle", "n") -- Toggle git blame
 
 -- Git sign
 mapkey("n", "Gitsigns next_hunk", "n") -- Next hunk
