@@ -12,6 +12,10 @@ mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>m", "NvimTreeFocus", "n")
 mapkey("<leader>e", "NvimTreeToggle", "n")
 
+-- Window Navigatio}n
+mapkey("]h", "Gitsigns next_hunk", "n")
+mapkey("[h", "Gitsigns prev_hunk", "n")
+
 -- Pane and Window Navigation
 mapkey("<C-h>", "<C-w>h", "n") -- Navigate Left
 mapkey("<C-j>", "<C-w>j", "n") -- Navigate Down
@@ -25,7 +29,6 @@ mapkey("<C-h>", "TmuxNavigateLeft", "n") -- Navigate Left
 mapkey("<C-j>", "TmuxNavigateDown", "n") -- Navigate Down
 mapkey("<C-k>", "TmuxNavigateUp", "n") -- Navigate Up
 mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
-
 
 -- Window Management
 mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
@@ -46,22 +49,19 @@ mapkey("<leader>ws", "luafile %", "n") -- Source lua file
 -- Tab navigation
 mapkey("<S-TAB>", "tabnext", "n") -- Source lua file
 mapkey("<leader>;", "tabnew %", "n") -- Source lua file
+
 -- Java
 -- mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
 
 -- Format
-mapkey ("<leader>nf", ":'<,'>Neoformat", "n") -- Format
+mapkey("<leader>nf", ":'<,'>Neoformat", "n") -- Format
 
 -- Git blame
 mapkey("<leader>gt", "GitBlameToggle", "n") -- Toggle git blame
 
--- Git sign
-mapkey("n", "Gitsigns next_hunk", "n") -- Next hunk
-
 -- Diffview
-mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview 
-mapkey("<leader>dc", "DiffviewClose", "n") -- Close diffview 
-
+mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview
+mapkey("<leader>dc", "DiffviewClose", "n") -- Close diffview
 
 -- Show Full File-Path
 mapkey("<leader>pa", "ShowPath", "n") -- Show Full File Path
