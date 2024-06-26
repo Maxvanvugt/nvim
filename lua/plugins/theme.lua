@@ -37,7 +37,7 @@ return {
   lazy = false,
   config = function()
     require("themer").setup({
-	  colorscheme = "nightlamp"
+	  colorscheme = "catppuccin"
     })
   end
 }
