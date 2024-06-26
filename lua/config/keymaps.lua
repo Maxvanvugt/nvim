@@ -1,9 +1,9 @@
 local mapkey = require("util.keymapper").mapvimkey
 -- Buffer Navigation
-mapkey("<leader>bn", "bnext", "n") -- Next buffer
 mapkey("<TAB>", "bnext", "n") -- Next buffer
 mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
 mapkey("<leader>bd", "bdelete", "n") -- Delete buffer
+mapkey("<leader>h", "bdelete", "n") -- Delete buffer
 mapkey("<leader>bc", "bufdo bd", "n") -- Delete all buffers
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
@@ -31,8 +31,6 @@ mapkey("<C-k>", "TmuxNavigateUp", "n") -- Navigate Up
 mapkey("<C-l>", "TmuxNavigateRight", "n") -- Navigate Right
 
 -- Window Management
-mapkey("<leader>sv", "vsplit", "n") -- Split Vertically
-mapkey("<leader>sh", "split", "n") -- Split Horizontally
 mapkey("<leader>k", "vsplit", "n") -- Split Vertically
 mapkey("<leader>j", "split", "n") -- Split Horizontally
 mapkey("<C-Up>", "resize +2", "n")
@@ -60,8 +58,8 @@ mapkey("<leader>nf", ":'<,'>Neoformat", "n") -- Format
 mapkey("<leader>gt", "GitBlameToggle", "n") -- Toggle git blame
 
 -- Diffview
-mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview
-mapkey("<leader>dc", "DiffviewClose", "n") -- Close diffview
+-- mapkey("<leader>do", "DiffviewOpen", "n") -- Open diffview
+-- mapkey("<leader>dc", "DiffviewClose", "n") -- Close diffview
 
 -- Show Full File-Path
 mapkey("<leader>pa", "ShowPath", "n") -- Show Full File Path
