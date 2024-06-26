@@ -391,4 +391,9 @@ return {
 	{
 		"rafamadriz/friendly-snippets",
 	},
+	{
+		"dgagn/diagflow.nvim",
+        lazy = false,
+		opts = {},
+	},
 }
