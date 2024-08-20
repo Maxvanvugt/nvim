@@ -15,18 +15,22 @@ local keys = {
 	{ "<leader>ft", "<cmd>Telescope themes<cr>", desc = "Themes" },
 }
 
+local conf = require('telescope.config').values;
+
 require("telescope").setup({
   defaults = {
     mappings = {
       i = {
         ["<C-j>"] = "move_selection_next",
         ["<C-k>"] = "move_selection_previous",
+        ["<C-Down>"] = "cycle_history_next",
+        ["<C-Up>"] = "cycle_history_prev",
       },
     },
   },
-
   pickers = {
     live_grep = {
+      vimgrep_arguments = table.insert(conf.vimgrep_arguments, '--fixed-strings'),
       file_ignore_patterns = { "node_modules", ".venv" },
       additional_args = function(_)
         return { "--hidden", "--no-ignore-vcs" }
