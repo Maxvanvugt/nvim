@@ -79,11 +79,6 @@ return {
 
 			vim.opt.completeopt = "menu,menuone,noselect"
 			cmp.setup({
-				snippet = {
-					expand = function(args)
-						vim.fn["vsnip#anonymous"](args.body)
-					end,
-				},
 				mapping = cmp.mapping.preset.insert({
 					["<Tab>"] = cmp.mapping.select_next_item(), -- next suggestion
 					["<S-Tab>"] = cmp.mapping.select_prev_item(), -- previous suggestion
@@ -98,7 +93,6 @@ return {
 				-- sources for autocompletion
 				sources = cmp.config.sources({
 					{ name = "nvim_lsp" }, -- lsp
-					{ name = "vsnip" }, -- snippets
 					{ name = "buffer" }, -- text within current buffer
 					{ name = "path" }, -- file system paths
 				}),
@@ -383,17 +377,10 @@ return {
 		"hrsh7th/nvim-cmp",
 	},
 	{
-		"hrsh7th/cmp-vsnip",
-	},
-	{
-		"hrsh7th/vim-vsnip-integ",
-	},
-	{
-		"rafamadriz/friendly-snippets",
-	},
-	{
 		"dgagn/diagflow.nvim",
         lazy = false,
-		opts = {},
+		opts = {
+            scope = 'line'
+        },
 	},
 }

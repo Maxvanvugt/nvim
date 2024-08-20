@@ -1,4 +1,18 @@
 return {
+    {
+        "L3MON4D3/LuaSnip",
+        -- follow latest release.
+        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        -- install jsregexp (optional!).
+        build = "make install_jsregexp",
+
+		config = function()
+            -- require("luasnip.loaders.from_vscode").load({ include = { "javascript" } })
+            require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_snipmate").lazy_load()
+		end,
+        lazy = true
+    },
 	-- Neocong
 	{
 		"folke/neoconf.nvim",
@@ -104,6 +118,7 @@ return {
 	},
 	{
 		"mg979/vim-visual-multi",
+        lazy = true
 	},
 	{
 		"hrsh7th/cmp-buffer",
@@ -116,15 +131,6 @@ return {
 	},
 	{
 		"hrsh7th/nvim-cmp",
-	},
-	{
-		"hrsh7th/cmp-vsnip",
-	},
-	{
-		"hrsh7th/vim-vsnip-integ",
-	},
-	{
-		"rafamadriz/friendly-snippets",
 	},
 	{
 		"preservim/tagbar",
