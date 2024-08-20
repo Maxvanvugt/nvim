@@ -47,6 +47,7 @@ mapkey("<leader>ws", "luafile %", "n") -- Source lua file
 -- Tab navigation
 mapkey("<S-TAB>", "tabnext", "n") -- Source lua file
 mapkey("<leader>;", "tabnew %", "n") -- Source lua file
+mapkey("<leader>to", "tabonly", "n") -- Source lua file
 
 -- Java
 -- mapkey("<leader>jr", "update <BAR> JavaRunnerRunMain", "n") -- Run Java Main
