@@ -49,10 +49,9 @@ return {
 				"emmet_ls",
 				"jsonls",
 				"clangd",
-				"jdtls",
 			},
 
-			automatic_installation = true,
+			automatic_installation = false,
 		},
 		event = "BufReadPre",
 		dependencies = "williamboman/mason.nvim",
@@ -113,7 +112,7 @@ return {
 		"neovim/nvim-lspconfig",
 		config = function()
 			require("neoconf").setup({})
-			require("java").setup()
+			-- require("java").setup()
 			local cmp_nvim_lsp = require("cmp_nvim_lsp")
 			local lspconfig = require("lspconfig")
 			local capabilities = cmp_nvim_lsp.default_capabilities()

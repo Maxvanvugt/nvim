@@ -2,13 +2,12 @@ return {
     {
         "L3MON4D3/LuaSnip",
         -- follow latest release.
-        version = "v2.*", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
+        version = "v2.3", -- Replace <CurrentMajor> by the latest released major (first number of latest release)
         -- install jsregexp (optional!).
         build = "make install_jsregexp",
 
 		config = function()
-            -- require("luasnip.loaders.from_vscode").load({ include = { "javascript" } })
-            require("luasnip.loaders.from_vscode").lazy_load()
+            require("luasnip.loaders.from_vscode").lazy_load({ paths = { "./snippets" } })
             require("luasnip.loaders.from_snipmate").lazy_load()
 		end,
         lazy = true
@@ -113,9 +112,9 @@ return {
 		opts = {},
 	},
 	-- JDT LS
-	{
-		"mfussenegger/nvim-jdtls",
-	},
+	-- {
+	-- 	"mfussenegger/nvim-jdtls",
+	-- },
 	{
 		"mg979/vim-visual-multi",
         lazy = true
@@ -161,4 +160,9 @@ return {
 			},
 		},
 	},
+    {
+      "folke/trouble.nvim",
+      opts = {}, -- for default options, refer to the configuration section for custom setup.
+      cmd = "Trouble",
+    }
 }

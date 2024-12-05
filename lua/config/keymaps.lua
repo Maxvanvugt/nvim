@@ -1,10 +1,10 @@
 local mapkey = require("util.keymapper").mapvimkey
 -- Buffer Navigation
 mapkey("<TAB>", "bnext", "n") -- Next buffer
-mapkey("<leader>bp", "bprevious", "n") -- Prev buffer
+mapkey("<S-TAB>", "BufferLineCyclePrev", "n") -- Prev buffer
 mapkey("<leader>bd", "bdelete", "n") -- Delete buffer
 mapkey("<leader>h", "bdelete", "n") -- Delete buffer
-mapkey("<leader>bc", "bufdo bd", "n") -- Delete all buffers
+mapkey("<leader>do", "BufferLineCloseOthers", "n") -- Delete all buffers
 mapkey("<leader>bb", "e #", "n") -- Switch to Other Buffer
 mapkey("<leader>`", "e #", "n") -- Switch to Other Buffer
 
@@ -45,7 +45,6 @@ mapkey("<leader>ww", "update", "n") -- Update current file
 mapkey("<leader>ws", "luafile %", "n") -- Source lua file
 
 -- Tab navigation
-mapkey("<S-TAB>", "tabnext", "n") -- Source lua file
 mapkey("<leader>;", "tabnew %", "n") -- Source lua file
 mapkey("<leader>to", "tabonly", "n") -- Source lua file
 
@@ -88,6 +87,12 @@ api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
 -- DiffView
 api.nvim_set_keymap("v", "<leader>df", ":DiffviewFileHistory<CR>", {})
 
+-- Trouble
+mapkey("<leader>xx", "Trouble diagnostics", "n") -- Quit a window
+
+-- Toggle search highlight
+mapkey("<leader>q", ":nohlsearch", "n")
+
 -- Comments
 api.nvim_set_keymap("n", "<C-_>", "gtc", { noremap = false })
 api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
@@ -97,3 +102,18 @@ api.nvim_set_keymap("v", "<C-_>", "goc", { noremap = false })
 -- vim.keymap.set('i', '<Tab>', function()
 --   return vim.fn.pumvisible() == 1 and "<C-n>" or "<Tab>"
 -- end, { expr = true })
+--
+vim.keymap.set("n", "<leader>lg", function()
+    --  get file name with extension
+    local file = vim.fn.expand("%:t")
+    vim.cmd("LazyGit")
+
+    -- Wait a bit for LazyGit to load
+    vim.defer_fn(function()
+        -- search for the file, highlight, and exit search mode in lazygit
+        vim.api.nvim_feedkeys("/" .. file, "t", true)
+        vim.api.nvim_input("<CR>")
+        vim.api.nvim_input("<ESC>")
+    end, 150) -- (milliseconds)
+end, { desc = "[g]it" })
+
