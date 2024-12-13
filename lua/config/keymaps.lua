@@ -83,6 +83,7 @@ api.nvim_set_keymap("n", "<leader>zn", ":TZNarrow<CR>", {})
 api.nvim_set_keymap("v", "<leader>zn", ":'<,'>TZNarrow<CR>", {})
 api.nvim_set_keymap("n", "<leader>zm", ":TZMinimalist<CR>", {})
 api.nvim_set_keymap("n", "<leader>za", ":TZAtaraxis<CR>", {})
+api.nvim_set_keymap('n', 'ya', 'gg"+yG', { noremap = true, silent = true })
 
 -- DiffView
 api.nvim_set_keymap("v", "<leader>df", ":DiffviewFileHistory<CR>", {})
